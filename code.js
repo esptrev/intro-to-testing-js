@@ -7,5 +7,12 @@ helloWorld();
 
 
 function sayHello(input) {
-    return("Hello " + input + "!");
-}
+    if (input === undefined || input === true || input === false) {
+        return ("Hello World!");
+    } else if (input === null){
+        return "Input is Null!";
+    }else if(input === ""){
+        return "Please enter a Name.";
+    } else{
+    return ("Hello " + input + "!");
+}}

@@ -30,6 +30,22 @@ describe('sayHello', function () {
     it('should return the string "Hello Pat!"', function () {
         expect(sayHello("Pat")).toBe("Hello Pat!");
     });
+    it('should return the string "Hello World!"', function () {
+        expect(sayHello()).toBe("Hello World!");
+    });
+    it('should return string "Hello World!"', function (){
+        expect(sayHello(true)).toBe("Hello World!");
+    });
+    it('should return the string "Hello World!"', function () {
+        expect(sayHello(false)).toBe("Hello World!");
+    });
+    it('should return the string "Input is Null!"', function () {
+        expect(sayHello(null)).toBe("Input is Null!");
+    });
+    it('should return the string "Please enter a Name"', function () {
+        expect(sayHello("")).toBe("Please enter a Name.");
+
+    });
 
 
 });
