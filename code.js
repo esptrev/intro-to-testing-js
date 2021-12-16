@@ -16,3 +16,19 @@ function sayHello(input) {
     } else{
     return ("Hello " + input + "!");
 }}
+//come back here and add more to the function to satisfy new tests
+
+function isFive(input){
+    if(parseInt(input) === 5){
+        return true;
+    }else{
+        return false;
+    }
+}
+function isEven (input){
+    if(input % 2 === 0 && typeof input === "number"){
+        return true;
+    }else {
+        return false;
+    }
+}
