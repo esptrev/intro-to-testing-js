@@ -126,6 +126,40 @@ describe('isVowel', function () {
     it('should should return "false" when called with as an undefined function', function () {
         expect(isVowel()).toBe(false);
     })
-
-
 });
+describe('isAdd', function (){
+    it('should be a defined function', function () {
+        expect(typeof isAdd).toBe('function')
+    });
+    it('should add two numbers or a string of numbers', function () {
+        expect(typeof isAdd()).toBe("number");
+    });
+    it('should produce 5 when called with 2,3', function () {
+        expect(isAdd(2,3)).toBe(5);
+    });
+    it('should produce -12 when called with -3,-9', function () {
+        expect(isAdd(-3,-9)).toBe(-12);
+    });
+    it('should produce 11 when called with 5,6', function () {
+        expect(isAdd(5,6)).toBe(11);
+    });
+    it('should produce 6 when called with -4,10', function () {
+        expect(isAdd(-4,10)).toBe(6);
+    });
+    it('should produce NaN when called with banana, split', function () {
+        expect(isAdd("banana","split")).toBeNaN();
+    });
+    it('should produce NaN when called with 2, apples', function () {
+        expect(isAdd(2,"apples")).toBeNaN();
+    });
+    it('should produce NaN when called as an undefined function', function () {
+        expect(isAdd()).toBeNaN();
+    });
+
+
+
+
+})
+
+
+
