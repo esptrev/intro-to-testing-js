@@ -94,5 +94,38 @@ describe('isEven', function () {
     it('should return "false" when called with Infinity', function () {
         expect(isEven(false)).toBe(false);
     });
+});
+describe('isVowel', function () {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean regardless of input', function () {
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should should return "true" when called with an "a', function () {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should should return "true" when called with an "A"', function () {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should should return "false" when called with an "y"', function () {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should should return "false" when called with an "4"', function () {
+        expect(isVowel("4")).toBe(false);
+    });
+    it('should should return "false" when called with an "true"', function () {
+        expect(isVowel("true")).toBe(false);
+    });
+    it('should should return "false" when called with an "false"', function () {
+        expect(isVowel("false")).toBe(false);
+    });
+    it('should should return "false" when called with an "banana"', function () {
+        expect(isVowel("banana")).toBe(false);
+    })
+    it('should should return "false" when called with as an undefined function', function () {
+        expect(isVowel()).toBe(false);
+    })
+
 
 });
